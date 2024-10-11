@@ -1,0 +1,211 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligns items to the start */
+    height: 100vh;
+    background-color: #f5f5dc; /* Cream background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.stall {
+    width: 450px; /* Stall size */
+    height: auto; /* Allows dynamic height based on content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 150px; /* Adjust top margin to move stall down */
+}
+
+/* Canopy */
+.canopy {
+    width: 100%;
+    height: 120px; 
+    background: repeating-linear-gradient(
+        90deg,
+        rgb(253, 139, 233),
+        rgb(253, 139, 233) 30px,
+        white 30px,
+        white 60px
+    );
+    border-top-left-radius: 15px; 
+    border-top-right-radius: 15px; 
+    box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Border */
+.button-border {
+    border: 24px solid #d2b48c; /* Border simulating poles */
+    border-top: none; /* No top border to blend with the canopy */
+    border-bottom: 1px solid #d2b48c;
+    border-radius: 8px; /* Rounded corners for the border */
+    position: relative;
+    padding: 40px; /* Padding for space inside the border */
+    width: 325px;
+}
+
+/* Button styles */
+.buttons {
+    display: grid; /* Change back to grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 15px; /* Space between buttons */
+    width: 100%; /* Full width inside the border */
+    margin: auto; /* Center the buttons */
+}
+
+.cute-button,
+.button-56 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fee6e3; /* Light background */
+    border: 2px solid #111; /* Dark border */
+    border-radius: 8px;
+    color: #111;
+    cursor: pointer;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    height: 48px;
+    line-height: 24px;
+    padding: 0 25px; /* Default padding */
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    transition: transform .2s ease-out, background-color 0.3s; /* Add transition for background color */
+}
+
+.cute-button:hover,
+.button-56:hover {
+    background-color: #ffdeda; /* Light pink on hover */
+}
+
+.message-preview {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #d2b48c;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #d2b48c;
+    border-radius: 5px;
+    white-space: nowrap;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cute-button:hover .message-preview {
+    display: block;
+}
+
+.button-56:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+.button-56:hover:after {
+    transform: translate(0, 0);
+}
+
+.button-56:active {
+    background-color: #ffdeda; /* Light pink when active */
+    outline: 0;
+}
+
+.button-56:hover {
+    outline: 0;
+}
+
+/* Hanging Sign */
+.sign {
+    border: 2px solid #d2b48c;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #000000;
+    font-size: 60px;
+    font-family: Apple Chancery, cursive;
+    position: absolute;
+    top: 360px; /* Positioning the sign to hang below the canopy */
+    z-index: 1;
+}
+
+.sign::before {
+    content: '';
+    width: 2px;
+    height: 20px;
+    background-color: #d2b48c;
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+}
+
+/* Stall Counter */
+.counter {
+    width: 100%;
+    height: 225px; 
+    background-color: #D2B48C; /* Light wood color */
+    border-bottom-left-radius: 15px; 
+    border-bottom-right-radius: 15px; 
+    box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.1); 
+}
+
+.fancy-letter {
+    background-color: #fff8dc; /* Light cream background for the letter */
+    border: 1px solid #d2b48c; /* Border color matching the stall */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Space inside the letter */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    font-family: 'Georgia', serif; /* Elegant font for the letter */
+    line-height: 1.6; /* Space between lines for readability */
+    color: #333; /* Dark text color for contrast */
+}
+
+.fancy-letter h2 {
+    margin-top: 0; /* Remove default margin */
+    color: #d2691e; /* Color for the heading */
+}
+
+.fancy-letter p {
+    margin: 0.5em 0; /* Space between paragraphs */
+    color: #333; /* Text color */
+}
+
+.scrapbook {
+    margin-top: 20px; /* Space between the modal and the scrapbook */
+    text-align: center; /* Center the heading */
+}
+
+.scrapbook-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Create a 5-column grid */
+    gap: 10px; /* Space between grid items */
+    padding: 10px; /* Padding around the grid */
+}
+
+.scrapbook-item {
+    border: 2px solid #d2b48c; /* Border for each scrapbook item */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure images stay within borders */
+}
+
+.scrapbook-item img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove gaps */
+}
+
+

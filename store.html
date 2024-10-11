@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Stall</title>
+    <link rel="stylesheet" href="store.css"> <!-- Link to external CSS -->
+    <style>
+        /* Basic styles for the modal */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stall">
+        <!-- Canopy (Red and White striped) -->
+        <div class="canopy"></div>
+
+        <!-- New Div for Buttons with Border -->
+        <div class="button-border">
+            <div class="button-container">
+                <div class="buttons">
+                    <div class="cute-button" onclick="openModal('cute-message-1')">
+                        ≧◡≦
+                        <div class="message-preview">Click me when you're stressed!</div>
+                    </div>
+                    <div class="cute-button" onclick="openModal('cute-message-2')">
+                        ♥
+                        <div class="message-preview">Click me for a quiz!</div>
+                    </div>
+                    <div class="cute-button" onclick="openModal('virtual-hug')"> <!-- Done -->
+                         ◕_◕ 
+                        <div class="message-preview">Click me for a virtual hug!</div>
+                    </div>
+                    <div class="cute-button" onclick="openModal('sweet-letter')">
+                        ￣³￣
+                        <div class="message-preview">Click me to see some happy memories!</div>
+                    </div>
+                    <div class="cute-button" onclick="openModal('hidden-treasure')">
+                        ♥‿♥
+                        <div class="message-preview">Click me to find out why Spencer loves you!</div>
+                    </div>
+                    <div class="cute-button" onclick="openModal('virtual-hug-2')">
+                        ʕ •́؈•̀)
+                        <div class="message-preview">Click for a speical message!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign hanging in front of the stall -->
+        <div class="sign" onclick="navigateToPage('main.html')">S&A's</div>
+        <script>
+            function navigateToPage(page) {
+                window.location.href = page;
+            }
+        </script>
+        <!-- Stall Counter -->
+        <div class="counter"></div>
+    </div>
+
+    <!-- Modal structure -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-text"></div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(messageId) {
+            let modalText = document.getElementById('modal-text');
+            switch (messageId) {
+                case 'cute-message-1': //Done - revise
+                    modalText.innerHTML = `
+                        <div class="fancy-letter">
+                            <h2>Dear Anna,</h2>
+                            <p>If you've clicked on this button, it must mean that you're feeling stressed or overwhelmed. Whatever is bothering you, whether it's school, friends, your career, or any of the relationships in your life, I know you'll be able to get through it.</p>
+                            <p>You are the girlbossiest, kindest, and most hardworking person that I know. No matter what life throws your way, my baby can handle it.</p>
+                            <p>Always remember that God has a plan for you. He wouldn't send you anything that he knows you can't overcome. Trust that everything happens for a reason and try to find small positives that you can use to encourage yourself to move forward and grow as a person.</p>
+                            <p>I am your biggest cheerleader and I forever will be. Whatever you choose to do in life, know that I will always be there when you need me. In times of stress, sadness, anger, and frustration, my arms and ears are open to you.</p>
+                            <p>Your Anna-Loving Boyfriend,</p>
+                            <p>Spencer Paul Madden</p>
+                        </div>
+                    `;
+                break;
+                case 'cute-message-2':
+                    modalText.innerHTML = '<h2>Cute Message 2</h2><p>Keep smiling!</p>';
+                    break;
+                case 'virtual-hug': //Done
+                    modalText.innerHTML = `
+                        <div style="text-align: center;">
+                            <h2>Virtual Hug 🤗</h2>
+                            <img src="milk-and-mocha-hug.gif" alt="Milk and Mocha Hug" style="max-width: 100%; height: 500px;">
+                        </div>
+                    `;
+                    break;
+                    case 'sweet-letter':
+                        modalText.innerHTML = `
+                            <div class="scrapbook">
+                                <h2>Time Well Spent</h2>
+                                <div class="scrapbook-grid">
+                                    <div class="scrapbook-item"><img src="70379071741__7584A3EC-D2B6-489D-A60F-478F932874FA.jpeg" alt="Memory 1"></div>
+                                    <div class="scrapbook-item"><img src="70440311107__7CBE534F-4FE7-4014-B13D-7DE19BB65EFB.jpeg" alt="Memory 2"></div>
+                                    <div class="scrapbook-item"><img src="IMG_0070.jpeg" alt="Memory 3"></div>
+                                    <div class="scrapbook-item"><img src="IMG_0449.jpeg" alt="Memory 4"></div>
+                                    <div class="scrapbook-item"><img src="IMG_0488.jpeg" alt="Memory 5"></div>
+                                    <div class="scrapbook-item"><img src="IMG_0517.jpeg" alt="Memory 6"></div>
+                                    <div class="scrapbook-item"><img src="IMG_0680.jpeg" alt="Memory 7"></div>
+                                    <div class="scrapbook-item"><img src="IMG_0716.jpeg" alt="Memory 8"></div>
+                                    <div class="scrapbook-item"><img src="IMG_1690.jpeg" alt="Memory 9"></div>
+                                    <div class="scrapbook-item"><img src="IMG_1905.jpeg" alt="Memory 10"></div>
+                                    <div class="scrapbook-item"><img src="IMG_1988.jpeg" alt="Memory 11"></div>
+                                    <div class="scrapbook-item"><img src="IMG_2167.jpeg" alt="Memory 12"></div>
+                                    <div class="scrapbook-item"><img src="IMG_2262.jpeg" alt="Memory 13"></div>
+                                    <div class="scrapbook-item"><img src="IMG_2336.jpeg" alt="Memory 14"></div>
+                                    <div class="scrapbook-item"><img src="IMG_2381.jpeg" alt="Memory 15"></div>
+                                    <div class="scrapbook-item"><img src="IMG_2538 2.jpeg" alt="Memory 16"></div>
+                                    <div class="scrapbook-item"><img src="IMG_2538.jpeg" alt="Memory 17"></div>
+                                    <div class="scrapbook-item"><img src="IMG_2846.jpeg" alt="Memory 18"></div>
+                                    <div class="scrapbook-item"><img src="IMG_3061.jpeg" alt="Memory 19"></div>
+                                    <div class="scrapbook-item"><img src="IMG_3143.jpeg" alt="Memory 20"></div>
+                                    <div class="scrapbook-item"><img src="IMG_4999.jpeg" alt="Memory 21"></div>
+                                    <div class="scrapbook-item"><img src="IMG_5083.jpeg" alt="Memory 22"></div>
+                                    <div class="scrapbook-item"><img src="IMG_5378.jpeg" alt="Memory 23"></div>
+                                    <div class="scrapbook-item"><img src="IMG_5714.jpeg" alt="Memory 24"></div>
+                                    <div class="scrapbook-item"><img src="IMG_7005.jpeg" alt="Memory 25"></div>
+                                </div>
+                            </div>
+                        `;
+                    break;
+                case 'hidden-treasure':
+                    modalText.innerHTML = '<h2>Hidden Treasure</h2><p>Your smile is the greatest treasure!</p>';
+                    break;
+                case 'virtual-hug-2':
+                    modalText.innerHTML = '<h2>Another Virtual Hug</h2><p>🤗 Sending you love!</p>';
+                    break;
+                default:
+                    modalText.innerHTML = '<h2>Oops!</h2><p>Something went wrong!</p>';
+            }
+            document.getElementById('myModal').style.display = "block"; // Show the modal
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none"; // Hide the modal
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('myModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+</html>
