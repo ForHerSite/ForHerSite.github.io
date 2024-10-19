@@ -164,8 +164,8 @@ body {
 }
 
 .fancy-letter {
-    background-color: #fff8dc; /* Light cream background for the letter */
-    border: 1px solid #d2b48c; /* Border color matching the stall */
+    background-color: #ffffff; /* Light cream background for the letter */
+    border: 1px solid #fcc7c7; /* Border color matching the stall */
     border-radius: 10px; /* Rounded corners */
     padding: 20px; /* Space inside the letter */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
@@ -176,7 +176,6 @@ body {
 
 .fancy-letter h2 {
     margin-top: 0; /* Remove default margin */
-    color: #d2691e; /* Color for the heading */
 }
 
 .fancy-letter p {
@@ -207,5 +206,87 @@ body {
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove gaps */
 }
+.loveList {
+    font-family: 'Georgia', serif; /* Romantic font style */
+    background-color: #fff7f2; /* Soft, warm background color */
+    color: #d24d57; /* Gentle romantic red */
+    padding: 20px;
+    border-radius: 15px;
+    line-height: 1.8; /* Spacious line height for readability */
+    max-width: 600px; /* Limit the width for a love letter feel */
+    margin: 0 auto; /* Center the content */
+}
 
+.loveList li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff; /* Soft white background for each item */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for each item */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
 
+.loveList li:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    background-color: #fde4e6; /* Light pink on hover */
+}
+
+.loveList::before {
+    content: "Reasons I Love You";
+    display: block;
+    text-align: center;
+    font-size: 1.8em;
+    color: #d24d57;
+    margin-bottom: 20px;
+}
+
+.modal-content {
+    background-color: #fff7f2; /* Change this to your desired background color */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 10px; /* Optional: to soften the edges of the modal */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+.audio-controls {
+    display: flex;
+    flex-direction: column; /* Stacks each pair vertically */
+    gap: 10px; /* Adds space between each pair */
+}
+
+.audio-button{
+    font-family: 'Georgia', serif; /* Romantic font style */
+    justify-content: center;
+    background-color: #fee6e3; /* Light background */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 48px;
+    line-height: 24px;
+    padding: 0 25px; /* Default padding */
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    transition: transform .2s ease-out, background-color 0.3s; /* Add transition for background color */
+}
+.audio-control-pair {
+    display: flex; /* Aligns buttons side by side */
+    justify-content: center; /* Centers the buttons within the pair */
+    gap: 10px; /* Adds space between the Play and Save buttons */
+    padding-bottom: 10px; /* Space between buttons and the line */
+    border-bottom: none; /* No bottom border here */
+}
+
+.audio-control-pair:last-child {
+    border-bottom: none; /* Remove line for the last pair */
+}
+
+/* Short line styling */
+.line {
+    height: 2px; /* Height of the line */
+    background-color: #e2c8ce; /* Light pastel pink color */
+    width: 17%; /* Adjust this percentage to change line length */
+    margin: 0 auto; /* Center the line */
+    margin-bottom: 10px; /* Add space below the line */
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Market Stall</title>
     <link rel="stylesheet" href="store.css"> <!-- Link to external CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
     <style>
         /* Basic styles for the modal  */
         .modal {
@@ -58,7 +59,7 @@
                     </div>
                     <div class="cute-button" onclick="openModal('cute-message-2')">
                         ♥
-                        <div class="message-preview">Click me for a quiz!</div>
+                        <div class="message-preview">Click me to find out why I love you!</div>
                     </div>
                     <div class="cute-button" onclick="openModal('virtual-hug')"> <!-- Done -->
                          ◕_◕ 
@@ -117,13 +118,13 @@
                     `;
                 break;
                 case 'cute-message-2':
-                    modalText.innerHTML = '<h2>Cute Message 2</h2><p>Keep smiling!</p>';
+                    modalText.innerHTML = '<h2></h2><div class="loveList"><li>You’ve got a smile that could light up even the darkest room.</li><li>You let me be myself around you.</li><li>Your lips are amazing and I love to kiss them.</li><li>You are always there for me, no matter what.</li><li>You have a beautiful way of making even the most boring moments exciting.</li><li>You are so, so funny, and I love listening to you laugh.</li><li>You have a fantastic body that I can’t help but stare at.</li><li>You love going to new places and having new experiences.</li><li>Your ability to find a good place to eat is unmatched.</li><li>You make me feel loved in ways I never thought possible.</li><li>You remind me that it’s okay to be a little goofy sometimes.</li><li>You care so deeply about your friends and family.</li><li>You have just the cutest, most squeezable, and kissable face.</li><li>You were thoughtful enough to bring me lunch when I was working.</li><li>Your presence always makes everything better.</li><li>You’ve helped me learn so much about myself, emotionally and physically.</li></div>';
                     break;
                 case 'virtual-hug': //Done
                     modalText.innerHTML = `
                         <div style="text-align: center;">
                             <h2>Virtual Hug 🤗</h2>
-                            <img src="milk-and-mocha-hug.gif" alt="Milk and Mocha Hug" style="max-width: 100%; height: 500px;">
+                            <img src="milk-and-mocha-hug.gif" alt="Milk and Mocha Hug" style="max-width: 100%; height: 500px;width: 100%; /* Full width of the container */height: auto; /* Maintain aspect ratio */max-width: 600px; /* Optional: Set a maximum width */display: block; /* Center alignment in the container */margin: 0 auto; /* Center the GIF */">
                         </div>
                     `;
                     break;
@@ -161,16 +162,93 @@
                             </div>
                         `;
                     break;
-                case 'hidden-treasure':
-                    modalText.innerHTML = '<h2>Hidden Treasure</h2><p>Your smile is the greatest treasure!</p>';
+                    case 'hidden-treasure':
+                        modalText.innerHTML = `
+                            <div class="fancy-letter">
+                                <h2>Sleepy Time Story</h2>
+                                <p>Once upon a time in a vibrant jungle, there lived a really tall giraffe named Paul. With his long neck and even longer tongue, Paul loved to reach for the highest leaves on the tallest trees. However, he often felt lonely as he roamed the jungle, for most of his friends were much smaller and couldn’t keep up with him.</p>
+                                <p>One sunny afternoon, while Paul was munching on some scrumptious green leaves, he noticed a burst of orange in the trees nearby. Curious, he wandered over and discovered an orangutan named Banana. Banana was swinging from branch to branch, her fluffy fur shining in the sunlight. She was playful and full of energy, eager to explore the trees.</p>
+                                <p>Paul watched as Banana swung and twirled, fascinated by the orangutan's agility. As Banana spotted Paul, she paused, intrigued by the tall giraffe watching him from below. Though they were very different sizes, a spark of curiosity ignited between them.</p>
+                                <p>That day, Paul and Banana began to explore the jungle together. Paul showed Banana how to reach for the juiciest leaves, using his long neck to pull down the branches. In return, Banana showed Paul the best places to get bananas and how to peel them, encouraging him to try. While his hooves were too big to peel, Paul learned to enjoy the view from below as Banana swung through the trees.</p>
+                                <p>As the days passed, their friendship blossomed. They discovered hidden waterfalls, played games in sunny clearings, and shared their favorite spots in the jungle. Paul loved watching Banana play, while Banana enjoyed the safety and height of Paul’s presence.</p>
+                                <p>One evening, as the sun dipped below the horizon, casting a warm glow over the jungle, Paul and Banana settled beneath a sprawling tree. The air was filled with the sounds of the jungle as the stars began to twinkle above. In that moment they both felt a sense of belonging, knowing they had found a true friend in one another.</p>
+                                <p>From that day on, Paul the Giraffe and Banana the Orangutan spent their days laughing and creating memories that would last a lifetime. A friendship, flourishing between the tallest giraffe and the prettiest, most amazing orangutan in the jungle.</p>
+                            </div>
+                        `;
                     break;
-                case 'virtual-hug-2':
-                    modalText.innerHTML = '<h2>Another Virtual Hug</h2><p>🤗 Sending you love!</p>';
-                    break;
+                    case 'virtual-hug-2':
+                        modalText.innerHTML = `
+                            <h2>I wanted to tell you...</h2>
+                                <div class="audio-controls">
+                                    <div class="audio-control-pair">
+                                        <button class="audio-button" onclick="playAudio('New Recording.m4a')">Play</button>
+                                        <a href="New Recording.m4a" download>
+                                            <button class="audio-button">Save</button>
+                                        </a>
+                                    </div>
+                                    <div class="line"></div> <!-- Line element -->
+                                    <div class="audio-control-pair">
+                                        <button class="audio-button" onclick="playAudio('New Recording 2.m4a')">Play</button>
+                                        <a href="New Recording 2.m4a" download>
+                                            <button class="audio-button">Save</button>
+                                        </a>
+                                    </div>
+                                    <div class="line"></div> <!-- Line element -->
+                                    <div class="audio-control-pair">
+                                        <button class="audio-button" onclick="playAudio('New Recording 3.m4a')">Play</button>
+                                        <a href="New Recording 3.m4a" download>
+                                            <button class="audio-button">Save</button>
+                                        </a>
+                                    </div>
+                                    <div class="line"></div> <!-- Line element -->
+                                    <div class="audio-control-pair">
+                                        <button class="audio-button" onclick="playAudio('New Recording 4.m4a')">Play</button>
+                                        <a href="New Recording 4.m4a" download>
+                                            <button class="audio-button">Save</button>
+                                        </a>
+                                    </div>
+                                    <div class="line"></div> <!-- Line element -->
+                                    <div class="audio-control-pair">
+                                        <button class="audio-button" onclick="playAudio('New Recording 5.m4a')">Play</button>
+                                        <a href="New Recording 5.m4a" download>
+                                            <button class="audio-button">Save</button>
+                                        </a>
+                                    </div>
+                                    <div class="line"></div> <!-- Line element -->
+                                    <div class="audio-control-pair">
+                                        <button class="audio-button" onclick="playAudio('New Recording 6.m4a')">Play</button>
+                                        <a href="New Recording 6.m4a" download>
+                                            <button class="audio-button">Save</button>
+                                        </a>
+                                    </div>
+                                    <div class="line"></div> <!-- Line element -->
+                                    <div class="audio-control-pair">
+                                        <button class="audio-button" onclick="playAudio('New Recording 7.m4a')">Play</button>
+                                        <a href="New Recording 7.m4a" download>
+                                            <button class="audio-button">Save</button>
+                                        </a>
+                                    </div>
+                                    <div class="line"></div> <!-- Line element -->
+                                    <div class="audio-control-pair">
+                                        <button class="audio-button" onclick="playAudio('New Recording 8.m4a')">Play</button>
+                                        <a href="New Recording 8.m4a" download>
+                                            <button class="audio-button">Save</button>
+                                        </a>
+                                    </div>
+                                </div>      
+
+                                </div>
+                        `;
+                        break;
                 default:
                     modalText.innerHTML = '<h2>Oops!</h2><p>Something went wrong!</p>';
             }
             document.getElementById('myModal').style.display = "block"; // Show the modal
+        }
+
+        function playAudio(file) {
+            const audio = new Audio(file);
+                audio.play();
         }
 
         function closeModal() {
